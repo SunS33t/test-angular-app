@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+export interface Card{
+  title:string;
+  text:string;
+  picLink:string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +13,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-angular-app';
+
+ 
 }
