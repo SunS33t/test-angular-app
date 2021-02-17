@@ -5,7 +5,6 @@
 <hr>
 <div>
 <app-card 
-[card] = "{title:'Card title',
-            text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu metus dictum lacus eleifend iaculis. Morbi malesuada, enim quis accumsan scelerisque, erat turpis efficitur turpis, id interdum tellus ante vitae lacus. Aliquam erat volutpat. Morbi posuere vitae est dignissim dictum. Suspendisse eget magna ipsum. Suspendisse potenti. Maecenas a justo in ex ornare aliquam ac in tortor.',           
-            picLink:'https://image.flaticon.com/icons/png/512/49/49353.png'}" ></app-card>
+*ngFor="let card of cards"
+[card] = card ></app-card>
 </div>

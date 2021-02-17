@@ -1,10 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import{Card} from '../app.component';
+import{Card} from '../../models';
+import { CardService } from '../card.service';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
+
 export class CardComponent implements OnInit {
 
 @Input() card: Card;
@@ -12,6 +15,7 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
 }
