@@ -1,5 +1,6 @@
-export interface Card{
+export interface Pizza{
     title:string;
     text:string;
     picLink:string;
+    weigth: number;
   }

@@ -5,6 +5,6 @@
 <hr>
 <div>
 <app-card 
-*ngFor="let card of cards"
-[card] = card ></app-card>
+*ngFor="let pizza of pizzas | async"
+[pizza] = pizza ></app-card>
 </div>

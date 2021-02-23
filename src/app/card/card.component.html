@@ -1,5 +1,5 @@
 <div class="card">
-    <p class = "title">{{card.title}}</p>
-    <img src="{{card.picLink}}" alt="" class="image" >
-    <p class="description">{{card.text}}</p>
+    <p class = "title">{{pizza.title}} </p>
+    <img [src]="pizza.picLink" alt="" class="image" >
+    <p class="description">Вес: {{pizza.weigth | weight_format}} <br> {{pizza.text}}</p>
 </div>
