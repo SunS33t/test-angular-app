@@ -3,4 +3,5 @@ export interface Pizza{
     text:string;
     picLink:string;
     weigth: number;
+    cost:number;
   }

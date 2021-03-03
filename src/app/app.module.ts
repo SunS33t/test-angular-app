@@ -6,12 +6,16 @@ import { CardComponent } from './card/card.component';
 
 import{HttpClientModule} from '@angular/common/http'
 import { WeightPipe } from './weight.pipe';
+import { CounterComponent } from './counter/counter.component';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    WeightPipe
+    WeightPipe,
+    CounterComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
