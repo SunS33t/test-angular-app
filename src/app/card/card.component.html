@@ -1,6 +1,6 @@
 <div class="card">
     <p class = "title">{{pizza.title}} </p>
     <img [src]="pizza.picLink" alt="" class="image" >
-    <p class="description">Цена: {{pizza.cost}}<br>Вес: {{pizza.weigth | weight_format}}<br>{{pizza.text}}</p>
-    <app-counter (countChangeEvent)="addToBasket($event)"></app-counter>
+    <p class="description">Цена: {{pizza.cost}} руб.<br>Вес: {{pizza.weigth | weight_format}}<br>Состав: {{pizza.text}}</p>
+    <app-counter (countChangeEvent)="addToBasket($event)" ></app-counter>
 </div>

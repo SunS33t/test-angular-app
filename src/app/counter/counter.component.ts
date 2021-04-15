@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Pizza } from 'src/models';
 import { BasketService } from '../basket.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class CounterComponent implements OnInit {
   constructor(private svc:BasketService) { }
 
   ngOnInit(): void {
-
+    this.svc.clearBasketEvent.subscribe(()=>this.clearCount())
   }
 
   add():void{
@@ -24,8 +23,12 @@ export class CounterComponent implements OnInit {
   }
 
   remove():void{
-    if(this.count!=0)
+    if(this.count != 0)
     this.count--;
+  }
+
+  clearCount(){
+    this.count = 0;
   }
 
 }

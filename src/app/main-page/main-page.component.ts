@@ -2,16 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pizza } from 'src/models';
-import{CardService} from './card.service';
+import { CardService } from '../card.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-main-page',
+  templateUrl: './main-page.component.html',
+  styleUrls: ['./main-page.component.scss']
 })
-export class AppComponent implements OnInit{
-  title = 'test-angular-app';
-
+export class MainPageComponent implements OnInit {
+  
   public pizzas:Observable<Pizza[]>;
 
   constructor(private cardService: CardService, public router: Router){
@@ -19,6 +18,10 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.getCards();
   }
-  
+
+  public getCards():void{
+      this.pizzas = this.cardService.getPizzas()
+  }
 }

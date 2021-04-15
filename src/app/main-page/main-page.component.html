@@ -1,0 +1,12 @@
+<div class="search"><app-searchbar (searchRequestEvent)="getCards()"></app-searchbar></div>
+<div>
+    <app-checkbox-filter (filterSetEvent)="getCards()"></app-checkbox-filter>
+</div>
+<div>
+<app-basket></app-basket>
+</div>
+<div class="cards">
+<app-card 
+*ngFor="let pizza of pizzas | async"
+[pizza] = pizza ></app-card>
+</div>

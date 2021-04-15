@@ -1,7 +1,9 @@
 .qty .count {
     color: #000;
     display: inline-block;
-    vertical-align: top;
+    position: absolute;
+    bottom: 20px;
+    left:49%;
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
@@ -13,7 +15,10 @@
 .qty .plus {
     cursor: pointer;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 20px;
+    left:60%;
     color: white;
     width: 30px;
     height: 30px;
@@ -24,7 +29,10 @@
 .qty .minus {
     cursor: pointer;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 20px;
+    left:40%;
     color: white;
     width: 30px;
     height: 30px;
@@ -35,6 +43,7 @@
 }
 div {
     text-align: center;
+
 }
 .minus:hover{
     background-color: #717fe0 !important;

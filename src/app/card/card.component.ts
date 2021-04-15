@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import{Pizza} from '../../models';
 import { BasketService } from '../basket.service';
 
@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   
   }
+  
   addToBasket(num:number):void {
       this.svc.setPizzaCount(this.pizza,num);
   }

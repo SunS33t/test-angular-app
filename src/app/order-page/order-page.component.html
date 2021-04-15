@@ -1,0 +1,10 @@
+<a class = "go-back" routerLink="../"> &laquo; Back to main page</a>
+<div class="container">
+    <h2>Корзина:</h2>
+        <ul class="dotted">
+            <li  *ngFor="let recipient of map | keyvalue">
+           <span>{{recipient.key.title}}  (x{{recipient.value}})</span>  <span>{{recipient.key.cost * recipient.value}}</span>
+            </li><h2 class="no-item" *ngIf='map.size === 0'>Заказов пока нет </h2>
+        </ul>
+</div>
+<app-form></app-form>

@@ -13,6 +13,7 @@ export class BasketComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.map = this.svc.map;
     this.svc.changeBasketEvent.subscribe(map => this.map = map)
   }
   
@@ -24,5 +25,8 @@ export class BasketComponent implements OnInit {
     return res;
   }
   
+  clearBasket(){
+    this.svc.clearBasket();
+  }
 
 }

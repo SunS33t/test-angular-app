@@ -1,11 +1,7 @@
 <div class="header">
-<img class = "logoIcon" src="https://icons-for-free.com/iconfiles/png/512/angular-1321215611022593855.png" alt="">
-<h1 class="page-title"> Test Angular App</h1>
+<img class = "logoIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWwtjKZdzXMtObrVpNo6l0mq3nS9Rsospapw&usqp=CAU" alt="">
+<h1 class="page-title"> Test Angular <span class="dark-orange">Pizza</span> App</h1>
 </div>
-<hr>
-<app-basket></app-basket>
-<div>
-<app-card 
-*ngFor="let pizza of pizzas | async"
-[pizza] = pizza ></app-card>
-</div>
+<router-outlet><router-outlet>
+
+

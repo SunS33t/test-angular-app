@@ -1,0 +1,8 @@
+
+<div class="container">
+
+    <ul class="ks-cboxtags">       
+      <li *ngFor="let tag of tags; index as i" 
+      ><input type="checkbox" id="checkbox{{i}}" [value]="tag.val" (change)="onCheckChange(tag)"><label for="checkbox{{i}}">{{tag.desc}}</label></li>    
+    </ul>
+  </div>

@@ -8,7 +8,6 @@ a{
     float: right;
     margin: 0;
     padding: 0;
-
 }
 
 .basket {
@@ -23,7 +22,7 @@ ul {
     float: right;
     width: 200px;
     margin: 0;
-    padding-left: 0;
+    padding-left: 0;  
 }
   
 li {
@@ -35,7 +34,7 @@ li {
     padding: 1rem;
     position: relative;
     text-decoration: none;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s;    
 }
     
 li a {
@@ -67,6 +66,36 @@ ul li ul:hover {
 }
   
 ul li ul li {
-   
     width: 100%;
+}
+
+.example_c {
+    align-self: center;
+    font-family: monospace;
+    text-align: center;
+    color: black !important;
+    font-size: 12px;
+    width: 150px;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 5px;
+    border: 2px solid black !important;
+    border-radius: 5px; 
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: all 0.2s ease 0s;
+    }
+
+.clear:hover {  
+    outline:none;
+    background: lightcoral;
+    color:black !important ;
+    transition: all 0.2s ease 0s;
+}
+
+.order:hover {  
+    outline:none;
+    background: lightgreen;
+    color:black !important ;
+    transition: all 0.2s ease 0s;
 }
