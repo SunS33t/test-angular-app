@@ -1,20 +1,21 @@
 <div class="container">
-  <div class= "basket">
-        <ul>
-          <li class="red" >Корзина
-            <ul class="dropdown">
-                <li  *ngFor="let recipient of map | keyvalue">
-                    Товар: {{recipient.key.title}}  <br>Кол-во: {{recipient.value}}  <br>Цена:{{recipient.key.cost * recipient.value}}
-                </li>
-                <li *ngIf="getTotal()!=0">ИТОГО : {{getTotal()}}</li>
-                <li>
-                  <div class="wrapper"> 
-                    <div class="button_cont"><a class="example_c clear"  (click)="clearBasket()">Очистить корзину</a></div>
-                    <div class="button_cont"><a class="example_c order" routerLink="../order">Заказать</a></div>                    
-                  </div>
-                </li>
-            </ul>
-          </li>     
+  <div class="basket">
+    <ul>
+      <li class="red">Корзина
+        <ul class="dropdown">
+          <li *ngFor="let recipient of map | keyvalue">
+            Товар: {{recipient.key.title}} <br>Кол-во: {{recipient.value}}
+            <br>Цена:{{recipient.key.cost * recipient.value}}
+          </li>
+          <li *ngIf="getTotal()!=0">ИТОГО : {{getTotal()}}</li>
+          <li>
+            <div class="wrapper">
+              <div class="button_cont"><a class="example_c clear" (click)="clearBasket()">Очистить корзину</a></div>
+              <div class="button_cont"><a class="example_c order" routerLink="../order">Заказать</a></div>
+            </div>
+          </li>
         </ul>
+      </li>
+    </ul>
   </div>
 </div>

@@ -11,14 +11,14 @@ export class SearchbarComponent implements OnInit {
 
   @Output() searchRequestEvent = new EventEmitter<string>();
   
-  constructor(private svc:CardService) { }
+  constructor() { }
 
   ngOnInit(): void {
 
   }
 
   search(a){
-    this.svc.nameFilter = a;  
+     this.searchRequestEvent.emit(a);
   }
 
 }

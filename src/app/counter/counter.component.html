@@ -1,5 +1,5 @@
 <div class="qty mt-5">
-    <span class="minus bg-dark" (click)="remove(); countChangeEvent.emit(this.count)">-</span>
-    <input type="number" class="count" name="qty" value="{{count}}" min="0" >
-    <span class="plus bg-dark" (click)="add();countChangeEvent.emit(this.count)">+</span>
+  <span class="minus bg-dark" (click)="remove(); countChangeEvent.emit(this.count)">-</span>
+  <input type="number" class="count" name="qty" value="{{count}}" min="0">
+  <span class="plus bg-dark" (click)="add();countChangeEvent.emit(this.count)">+</span>
 </div>

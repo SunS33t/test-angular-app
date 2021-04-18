@@ -10,13 +10,13 @@ import { CardService } from '../card.service';
 })
 export class CheckboxFilterComponent implements OnInit {
 
-  @Output() filterSetEvent = new EventEmitter();
+  @Output() filterSetEvent = new EventEmitter<string[]>();
 
   tags =  [ {desc:'Без мяса', val:'no-meat' ,check: false},
             {desc:'Острая',val:'spicy' ,check: false},
             {desc: 'Морепродукты',val:'seafood',check:false}];
 
-  constructor(private svc:CardService) { }
+  constructor() { }
 
   
   ngOnInit(): void {
@@ -29,7 +29,6 @@ export class CheckboxFilterComponent implements OnInit {
     this.tags.forEach(element => {
       element.check && filter.push(element.desc) 
     });
-    this.svc.descriptionFilter = filter;
-    this.filterSetEvent.emit();
+    this.filterSetEvent.emit(filter);
   }
 }
