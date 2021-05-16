@@ -1,0 +1,10 @@
+<a class="go-back" routerLink="/allOrders"> &laquo; Back to all orders</a>
+<div class="container">
+<h1>Заказ №{{this.order.orderId}}</h1>
+<br>
+<p>Статус: {{this.order.status}}</p>
+<h2>Содержание заказа:</h2>
+<ul>
+    <li *ngFor="let item of this.order.content |keyvalue">{{item.key.title}} ({{item.value}} шт.) стоимость: {{item.value*item.key.cost}} р. </li>
+</ul>
+</div>

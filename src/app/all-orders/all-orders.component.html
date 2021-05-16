@@ -1,0 +1,19 @@
+
+<a class="go-back" routerLink="../"> &laquo; Back to main page</a>
+
+<ul class="border">
+<li *ngFor="let item of orderList" [ngClass]="item.status == 'Принят'  ? 'red-border': item.status =='Готовится' ? 'orange-border': item.status=='Доставляется'? 'yellow-border':'green-border' ">Номер заказа: {{item.orderId}} 
+     <br>Статус: {{item.status}}
+     <br>Состав заказа:
+     <br>
+     <ul>
+        <li *ngFor="let recipient of item.content | keyvalue">
+            Товар: {{recipient.key.title}} <br>Кол-во: {{recipient.value}}
+            <br>Цена:{{recipient.key.cost * recipient.value}}
+          </li>
+     </ul>
+     <br> <a routerLink="/allOrders/{{item.orderId}}" *ngIf="item.status!='Завершен'">Детали</a>
+     </li>
+
+     
+</ul>

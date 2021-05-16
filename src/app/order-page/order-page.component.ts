@@ -10,10 +10,16 @@ import { BasketService } from '../basket.service';
 export class OrderPageComponent implements OnInit {
 
   map:Map<Pizza,number> = new Map<Pizza,number>()
-  constructor(private svc: BasketService) { }
+  constructor(private svc: BasketService) {
+  }
 
   ngOnInit(): void {
     this.map = this.svc.map;
   }
+
+  clearBask(){
+    this.svc.clearBasket();
+  }
+  
 
 }

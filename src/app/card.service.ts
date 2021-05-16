@@ -12,8 +12,6 @@ export class CardService {
   constructor(private http: HttpClient) { }
 
   public getPizzas():Observable<Pizza[]>{
-
     return this.http.get<Pizza[]>('assets/pizzas.json').pipe(delay(200));
-
   }
 }

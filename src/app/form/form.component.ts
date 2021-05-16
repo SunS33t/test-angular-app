@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterState } from '@angular/router';
+import { Order, Pizza } from 'src/models';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +10,12 @@ import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Va
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  
+  @Input() orderMap: Map<Pizza,number>;
+  @Output() addOrderEvent = new EventEmitter();
  
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private orderSvc:OrderService) { 
+    
+  }
 
   profileForm = new FormGroup({
     firstName: new FormControl('',[Validators.required,Validators.pattern('[a-zA-Zа-яА-я]*')]),
@@ -26,8 +32,11 @@ export class FormComponent {
   
 
   onSubmit() {
-
-    console.log(this.profileForm.value);
+      let ordMap= new Map<Pizza,number>(this.orderMap);
+      this.orderSvc.addOrder(ordMap);
+      this.addOrderEvent.emit();  
   }
+
+  
 }
 

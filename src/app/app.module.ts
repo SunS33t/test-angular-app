@@ -17,11 +17,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 import {Routes, RouterModule} from '@angular/router';
 import { FormComponent } from './form/form.component';
+import { AllOrdersComponent } from './all-orders/all-orders.component';
+import { OrderComponent } from './order/order.component';
 
 
 const appRoutes:Routes = [
   {path:'', component:MainPageComponent},
-  {path:'order',component: OrderPageComponent}
+  {path:'order',component: OrderPageComponent},
+  {path:'allOrders',component: AllOrdersComponent},
+  {path:'allOrders/:id',component: OrderComponent}
 ]
 
 @NgModule({
@@ -35,7 +39,9 @@ const appRoutes:Routes = [
     CheckboxFilterComponent,
     OrderPageComponent,
     MainPageComponent,
-    FormComponent
+    FormComponent,
+    AllOrdersComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

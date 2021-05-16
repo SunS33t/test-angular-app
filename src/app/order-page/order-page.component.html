@@ -8,4 +8,4 @@
     <h2 class="no-item" *ngIf='map.size === 0'>Заказов пока нет </h2>
   </ul>
 </div>
-<app-form></app-form>
+<app-form [orderMap]="map" (addOrderEvent)="clearBask()"></app-form>
